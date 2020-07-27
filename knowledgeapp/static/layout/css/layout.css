@@ -1,0 +1,103 @@
+body{
+  background-color: white;
+  scroll-behavior: smooth;
+}
+.welcome-screen{
+  position: relative;
+  height: calc(100vh - 60px);
+  background-image: url("../../../static/Images/welcome-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-items: baseline;
+  text-align: center;
+
+}
+.welcome-screen .letters{
+  position: absolute;
+  margin-top: 100px;
+  left: 0;
+  right: 0;
+  font-size: 8rem;
+  font-family: 'Bungee Outline', cursive;
+  text-shadow: 2px 2px #fff;
+}
+.welcome-screen .letters .know{
+  margin-left: -30px;
+}
+.welcome-screen .letters .for{
+  margin-left: -30px;
+}
+.welcome-screen .getstarted{
+  position: absolute;
+  margin-top: 300px;
+  left: 0;
+  right: 0;
+}
+.welcome-screen button{
+  font-size: 2rem;
+}
+.welcome-screen .mainK{
+  animation: maink 1s;
+}
+@keyframes maink {
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
+.welcome-screen .for{
+  animation: for 2s;
+}
+@keyframes for {
+  0%{
+    opacity: 0;
+  }50%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
+.welcome-screen .know{
+  animation: Knowledge 3s;
+}
+@keyframes Knowledge {
+  0%{
+    opacity: 0;
+  }67%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
+
+.info-container{
+  position: relative;
+  height: 100vh;
+}
+.card{
+  align-items: center;
+}
+
+
+
+
+
+
+footer a{
+  color: #ddd;
+  text-decoration: none;
+}
+footer .footer-copyright a{
+  color: #fff;
+}
+footer a:hover{
+  color: black;
+}
+footer .footer-title{
+  text-align: center;
+  align-items: center;
+}
+footer .main-title{
+  font-size: 2rem;
+}
