@@ -1,10 +1,24 @@
 body{
   background-color: white;
   scroll-behavior: smooth;
+  overflow: scroll;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+main{
+  scroll-behavior: smooth;
+  overflow: scroll;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+section{
+  scroll-snap-align: start;
 }
 .welcome-screen{
   position: relative;
-  height: calc(100vh - 60px);
+  height: 100vh;
   background-image: url("../../../static/Images/welcome-bg.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -14,12 +28,12 @@ body{
 }
 .welcome-screen .letters{
   position: absolute;
-  margin-top: 100px;
+  margin-top: 30vh;
   left: 0;
   right: 0;
   font-size: 8rem;
   font-family: 'Bungee Outline', cursive;
-  text-shadow: 2px 2px #fff;
+  text-shadow: 2px 2px rgb(0,0,255);
 }
 .welcome-screen .letters .know{
   margin-left: -30px;
@@ -29,7 +43,7 @@ body{
 }
 .welcome-screen .getstarted{
   position: absolute;
-  margin-top: 300px;
+  margin-top: 65vh;
   left: 0;
   right: 0;
 }
@@ -72,16 +86,45 @@ body{
 }
 
 .info-container{
-  position: relative;
   height: 100vh;
 }
-.card{
-  align-items: center;
+.navarearemover{
+  background-color: black;
+  height: 66px;
+  margin-bottom: 0;
 }
-
-
-
-
+.card{
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 30vh;
+  margin-top: 13vh;
+  margin-bottom: 5vh;
+  box-shadow: 0 0 2rem rgba(0, 50, 150, .4);
+  border-style: solid;
+  border-radius: 20px;
+  border-width: medium;
+  border-color: rgb(0,50,150)
+}
+.card:nth-child(3){
+  margin-top: 0vh;
+}
+.cardtitle{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.card-desc{
+  padding: 10px 10px;
+  text-align: justify;
+  font-size: 1rem;
+}
+.card-imge{
+  position: relative;
+  width: 80%;
+  height: 80%;
+  margin: 10% 10%;
+}
 
 
 footer a{
