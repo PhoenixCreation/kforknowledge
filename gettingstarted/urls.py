@@ -8,4 +8,5 @@ admin.autodiscover()
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", view.index,name="index"),
+    path("explore", view.explore, name="explore"),
 ]

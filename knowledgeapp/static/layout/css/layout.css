@@ -1,14 +1,6 @@
 body{
   background-color: white;
   scroll-behavior: smooth;
-  overflow: scroll;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
-}
-main{
-  scroll-behavior: smooth;
-  overflow: scroll;
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
@@ -97,7 +89,7 @@ section{
   margin-left: 25%;
   margin-right: 25%;
   height: 30vh;
-  margin-top: 13vh;
+  margin-top: 8vh;
   margin-bottom: 5vh;
   box-shadow: 0 0 2rem rgba(0, 50, 150, .4);
   border-style: solid;
@@ -124,6 +116,10 @@ section{
   width: 80%;
   height: 80%;
   margin: 10% 10%;
+}
+.explore-button{
+  align-items: center;
+  text-align: center;
 }
 
 

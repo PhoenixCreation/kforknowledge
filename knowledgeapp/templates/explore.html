@@ -1,0 +1,13 @@
+{% extends 'layout.html'%}
+{% block content %}
+{% for info in infos %}
+<div class="">{{info.title}}</div>
+<div class="">{{info.description}}</div>
+<div class="">{{info.b_des}}</div>
+{{info.b_link | safe}}
+<div class="">{{info.i_des}}</div>
+{{info.i_link | safe}}
+<div class="">{{info.e_des}}</div>
+{{info.e_link | safe}}
+{% endfor %}
+{% endblock%}
