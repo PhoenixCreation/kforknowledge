@@ -10,3 +10,6 @@ class Courses(models.Model):
     i_link = models.TextField()
     e_des = models.TextField()
     e_link = models.TextField()
+
+    def __str__(self):
+        return self.title

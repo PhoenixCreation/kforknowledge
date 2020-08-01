@@ -1,0 +1,84 @@
+body{
+  /* background-color: #343434; */
+}
+.serach-area{
+  margin-top: 50px;
+  align-items: center;
+  text-align: center;
+}
+.search-form{
+  left: 0;
+  right: 0;
+  position: relative;
+  align-items: center;
+  display: flex;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.courses{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  grid-gap: 25px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  justify-items: center;
+}
+.course{
+  display: block;
+  background-color: white;
+  box-shadow: 0 0 15px black;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: rgb(0,50,150);
+  border-left-color: green;
+  border-top-color: red;
+  border-bottom-color: blue;
+  border-right-color: yellow;
+  animation: border-color-rotation 8s infinite ease-in;
+  max-width: 300px;
+  overflow: hidden;
+}
+@keyframes border-color-rotation {
+  0%{
+    border-left-color: green;
+    border-top-color: red;
+    border-right-color: yellow;
+    border-bottom-color: blue;
+  }25%{
+    border-left-color: red;
+    border-top-color: yellow;
+    border-right-color: blue;
+    border-bottom-color: green;
+  }50%{
+    border-left-color: yellow;
+    border-top-color: blue;
+    border-right-color: green;
+    border-bottom-color: red;
+  }75%{
+    border-left-color: blue;
+    border-top-color: green;
+    border-right-color: red;
+    border-bottom-color: yellow;
+  }100%{
+    border-left-color: green;
+    border-top-color: red;
+    border-right-color: yellow;
+    border-bottom-color: blue;
+  }
+}
+.courses .course-title{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.course .course-description{
+  text-align: justify;
+  padding: 10px;
+  font-size: 1rem;
+}
+.course .course-tags{
+  text-align: justify;
+  padding: 10px;
+  font-size: 1rem;
+  bottom: 0;
+}
