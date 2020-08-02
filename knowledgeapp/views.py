@@ -9,8 +9,12 @@ def explore(req):
         "infos": Courses.objects.all()
     }
     return render(req,"explore.html",context = info)
+
 def course(req,id):
     info = {
         "infos": Courses.objects.get(id=id)
     }
     return render(req, "course.html", context = info)
+
+def contact(req):
+    return render(req, "contact.html")

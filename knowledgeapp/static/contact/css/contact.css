@@ -1,0 +1,77 @@
+main{
+  background-color: white;
+}
+.mainbox{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #555657;
+  border-radius: 20px;
+  box-shadow: 0 0 15px black;
+  border-color: white;
+}
+.dev-category button{
+  text-transform: capitalize;
+  border: 3px solid #ED5556;
+  color: #ED5556;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  background-color: #252627;
+  outline: none;
+  cursor: pointer;
+  width: 20%;
+  overflow: hidden;
+}
+div[class^='category-']{
+  background-color: #ED5565;
+  margin-top: -3px;
+}
+.showCategory{
+  display: block;
+}
+.hideCategory{
+  display: none;
+}
+.mainbox .col-5{
+  padding: 20px;
+  border-radius: 20px;
+  border-color: black;
+  border-style: ridge;
+
+
+}
+.dev-category .active{
+  color: #252627;
+  background-color: #ED5556;
+}
+.dev-desc {
+  padding: 5px;
+  text-align: justify;
+}
+.socials{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social{
+  margin-top: 10px;
+}
+.social a{
+  width: 100%;
+}
+.social button{
+  border-width: 3px;
+  border-color: #ED2526;
+  border-radius: 7px;
+  background-color: #252627;
+  width: 100px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.social button:hover{
+  border-color: #000;
+  background-color: #ED2526;
+}

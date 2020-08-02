@@ -10,4 +10,5 @@ urlpatterns = [
     path("", view.index,name="index"),
     path("explore", view.explore, name="explore"),
     path("course/<int:id>", view.course, name="course"),
+    path("contact", view.contact, name="contact"),
 ]

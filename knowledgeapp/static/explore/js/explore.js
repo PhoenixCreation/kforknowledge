@@ -19,6 +19,9 @@ $('#searchbox').on('keypress', function (e) {
 function keyuped(e) {
   allow_only(e.value)
 }
+function searchbuttonclicked(){
+  allow_only(searchbox.values)
+}
 function allow_only(e) {
   console.log(e);
   var cntr = 1
