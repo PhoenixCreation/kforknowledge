@@ -1,0 +1,82 @@
+.course-container{
+  padding: 50px;
+}
+.title{
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: blue;
+  text-shadow: 5px 5px red;
+}
+.description-text{
+  font-weight: bold;
+}
+.description{
+  font-size: 1.4rem;
+  margin: 10px;
+  text-align: justify;
+}
+.tags{
+  font-size: 1.3rem;
+  margin: 10px;
+}
+.levels{
+  border-style: dotted;
+  border-radius: 30px;
+  margin: 20px;
+}
+.level{
+  border-style: dotted;
+  border-radius: 30px;
+  margin: 20px;
+  padding: 30px;
+}
+.level-title{
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.beginner .level-title{
+  color: green;
+}
+.intermidiate .level-title{
+  color: yellow;
+}
+.expert .level-title{
+  color: red;
+}
+.level-description{
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 10px;
+}
+.level-video{
+  display: grid;
+  align-items: center;
+}
+.video-container{
+  align-self: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.video-container iframe{
+  max-width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .course-container{
+    padding: 15px;
+  }
+  .levels{
+    padding: 5px;
+    margin: 0px;
+    border-radius: 15px;
+  }
+  .level{
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+  }
+  .level-description{
+    margin: 0px;
+  }
+}

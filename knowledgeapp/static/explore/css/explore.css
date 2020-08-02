@@ -29,6 +29,7 @@ body{
   box-shadow: 0 0 15px black;
   border-radius: 20px;
   border-style: solid;
+  border-width: thick;
   border-color: rgb(0,50,150);
   border-left-color: green;
   border-top-color: red;
@@ -81,4 +82,13 @@ body{
   padding: 10px;
   font-size: 1rem;
   bottom: 0;
+}
+.courses a{
+  text-decoration: none;
+  color: inherit;
+}
+.course:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgb(0,0,150);
+
 }

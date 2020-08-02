@@ -20,17 +20,19 @@
 
   <div class="courses">
   {% for info in infos %}
-    <div class="course {{info.title | cut:" "}}">
-      <div class="course-title">
-        {{ info.title }}
+    <a href="/course/{{ info.id }}">
+      <div class="course {{info.title | cut:" "}}">
+        <div class="course-title">
+          {{ info.title }}
+        </div>
+        <div class="course-description ">
+          {{ info.description }}
+        </div>
+        <div class="course-tags">
+          <b>Tages:</b> {{ info.tags }}
+        </div>
       </div>
-      <div class="course-description ">
-        {{ info.description }}
-      </div>
-      <div class="course-tags">
-        <b>Tages:</b> {{ info.tags }}
-      </div>
-    </div>
+    </a>
   {% endfor %}
   </div>
 

@@ -1,0 +1,45 @@
+{% extends 'layout.html'%}
+{% block content %}
+<div class="container-fluid course-container ">
+  <div class="title">
+    {{ infos.title }}
+  </div>
+  <div class="description">
+    <span class="description-text">Description: </span>{{ infos.description }}
+  </div>
+  <div class="tags">
+    <b>Related tags: </b> {{ infos.tags }}
+  </div>
+  <div class="levels">
+    <div class="level beginner">
+      <div class="level-title">Beginner</div>
+      <div class="level-description">
+        {{ infos.b_des }}
+      </div>
+      <div class="level-video">
+        <div class="video-container">{{ infos.b_link | safe}}</div>
+      </div>
+    </div>
+    <div class="level intermidiate">
+      <div class="level-title">Intermidiate</div>
+      <div class="level-description">
+        {{ infos.i_des}}
+      </div>
+      <div class="level-video">
+        <div class="video-container">{{ infos.i_link | safe}}</div>
+      </div>
+    </div>
+    <div class="level expert">
+      <div class="level-title">Expert</div>
+      <div class="level-description">
+        {{ infos.e_des }}
+      </div>
+      <div class="level-video">
+        <div class="video-container">{{ infos.e_link | safe}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- STylesheet files..... -->
+<link rel="stylesheet" href="../static/course/css/course.css">
+{% endblock %}
