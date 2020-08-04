@@ -105,7 +105,33 @@
       </div>
 
       <div class="col-7">
-        ldhuys
+        <form class="form" method="post" action="/contact">
+          {% csrf_token %}
+          <div class="formbox">
+            <div class="confirm-message">{{msg}}</div>
+            <div class="name-container">
+              <div class="first-name">
+                <label for="first-name">First Name: </label>
+                <input type="text" name="first-name" id="first-name" placeholder="First Name" class="form-control" required>
+              </div>
+              <div class="last-name">
+                <label for="last-name">Last Name:</label>
+                <input type="text" name="last-name" id="last-name" placeholder="Last Name" class="form-control" required>
+              </div>
+            </div>
+            <div class="email-container">
+              <label for="email">Email ID: </label>
+              <input type="email" name="email" id="email" placeholder="abc123@xyz.com" class="form-control" required>
+            </div>
+            <div class="message-container">
+              <label for="message">Feedback: </label>
+              <textarea name="message" id="message" placeholder="Give your valueable feedback" class="form-control"></textarea>
+            </div>
+            <div class="submit-container">
+              <button type="submit" name="submit" class="btn btn-outline-danger submit">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@ main{
   background-color: white;
 }
 .mainbox{
-  max-width: 900px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -74,4 +74,124 @@ div[class^='category-']{
 .social button:hover{
   border-color: #000;
   background-color: #ED2526;
+}
+
+.col-7{
+  position: relative;
+  height: 100%;
+}
+.formbox{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  border: 3px ridge black;
+  border-radius: 25px;
+  height: 100%;
+  justify-content: space-around;
+}
+.name-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.first-name{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.last-name{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.email-container{
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-container{
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+textarea{
+  resize: none;
+}
+.submit-container{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit{
+  flex: 1;
+  text-align: center;
+  max-width: 200px;
+}
+.formbox input, textarea{
+  border: 2px solid #ED5556 !important;
+  border-radius: 5px;
+}
+.formbox label{
+  font-size: 1.1rem;
+  color: #ED5556;
+  text-transform: uppercase;
+}
+.confirm-message{
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  color: #ED5556;
+  animation: fadeaway 5s linear;
+}
+@keyframes fadeaway {
+  0%{
+    font-size: 1.5rem;
+    opacity: 1;
+    display: block;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .row{
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .col-5{
+    flex: 1 !important;
+    max-width: 100%;
+  }
+  .col-7{
+    max-width: 100%;
+    padding: 0;
+  }
+  .formbox{
+    margin: 0;
+  }
+  .mainbox{
+    border-radius: 5px;
+  }
+  /* .dev-category button{
+    width: 22%;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+  } */
+  /* .mainbox .col-5{
+    padding: 5px;
+    border-radius: 5px;
+  } */
 }

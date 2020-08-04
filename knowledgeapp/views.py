@@ -17,4 +17,13 @@ def course(req,id):
     return render(req, "course.html", context = info)
 
 def contact(req):
-    return render(req, "contact.html")
+    if req.method == "POST":
+        info={
+            "msg": "Thank you for your valuable feedback."
+        }
+        return render(req, "contact.html",context=info)
+    else:
+        info={
+            "msg": ""
+        }
+        return render(req, "contact.html",context=info)
