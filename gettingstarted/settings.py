@@ -89,4 +89,12 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
 
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'DE.sem5.kfork@gmail.com'
+EMAIL_HOST_PASSWORD = 'kfork#123'
+EMAIL_PORT = 587
+
+
 django_heroku.settings(locals())
