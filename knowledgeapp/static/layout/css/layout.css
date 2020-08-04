@@ -151,7 +151,7 @@ footer .main-title{
   .welcome-screen .letters{
     flex-direction: column;
     margin-top: 5vh;
-    font-size: 4.5rem;
+    font-size: 4rem;
     text-shadow: 1px 1px rgb(0,0,255);
     letter-spacing: 5px;
     font-weight: bold;
