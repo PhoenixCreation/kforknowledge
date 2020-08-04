@@ -26,6 +26,10 @@ section{
   font-size: 8rem;
   font-family: 'Bungee Outline', cursive;
   text-shadow: 2px 2px rgb(0,0,255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
 }
 .welcome-screen .letters .know{
   margin-left: -30px;
@@ -121,8 +125,6 @@ section{
   align-items: center;
   text-align: center;
 }
-
-
 footer a{
   color: #ddd;
   text-decoration: none;
@@ -139,4 +141,33 @@ footer .footer-title{
 }
 footer .main-title{
   font-size: 2rem;
+}
+@media screen and (max-width: 985px) {
+  .welcome-screen .letters{
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .welcome-screen .letters{
+    flex-direction: column;
+    margin-top: 5vh;
+    font-size: 4.5rem;
+    text-shadow: 1px 1px rgb(0,0,255);
+    letter-spacing: 5px;
+    font-weight: bold;
+  }
+  .welcome-screen button{
+    font-size: 1.3rem;
+  }
+  .card{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0;
+  }
+  .card-title{
+    font-size: .8rem;
+  }
+  .card-desc{
+    font-size: .7rem;
+  }
 }
