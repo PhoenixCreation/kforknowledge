@@ -4,19 +4,22 @@ from django.core.mail import EmailMessage
 
 
 def index(req):
-    return render(req,"index.html")
+    return render(req, "index.html")
+
 
 def explore(req):
     info = {
         "infos": Courses.objects.all()
     }
-    return render(req,"explore.html",context = info)
+    return render(req, "explore.html", context=info)
 
-def course(req,id):
+
+def course(req, id):
     info = {
         "infos": Courses.objects.get(id=id)
     }
-    return render(req, "course.html", context = info)
+    return render(req, "course.html", context=info)
+
 
 def contact(req):
     if req.method == "POST":
@@ -25,14 +28,20 @@ def contact(req):
         email = req.POST['email']
         message = req.POST['message']
         msgbody = "name: "+fname+" : "+lname+" email: "+email+" msg: "+message+"....."
-        emailphnx = EmailMessage('Feedback of user',msgbody,to=['phoenixcreationweb@gmail.com'])
+        emailphnx = EmailMessage('Feedback of user', msgbody, to=[
+                                 'phoenixcreationweb@gmail.com'])
         emailphnx.send()
-        info={
+        info = {
             "msg": "Thank you for your valuable feedback."
         }
-        return render(req, "contact.html",context=info)
+        return render(req, "contact.html", context=info)
     else:
-        info={
+        info = {
             "msg": ""
         }
-        return render(req, "contact.html",context=info)
+        return render(req, "contact.html", context=info)
+
+
+def requestcourse(req):
+    info = {}
+    return render(req, "requestcourse.html", context=info)

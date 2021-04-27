@@ -54,6 +54,22 @@
           <input class="form-control mr-sm-2" type="search" placeholder="Start Searching" aria-label="Search">
           <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Find</button>
         </form>
+
+        <!-- Auth area -->
+        {% if user.is_authenticated %}
+        <div class="auth-area" style="display: flex; margin-left: 20px;">
+        <a href="/logout">
+        <button class="btn btn-outline-danger my-2 my-sm-0 mx-1" >Log out</button></a>
+        </div>
+        {% else %}
+        <div class="auth-area" style="display: flex; margin-left: 20px;">
+        <a href="/login">
+        <button class="btn btn-success my-2 my-sm-0 mx-1" >Login</button></a>
+        <a href="/signup">
+        <button class="btn btn-info my-2 my-sm-0" >Sign up</button></a>
+        </div>
+        {% endif %}
+
       </div>
     </nav>
   </header>

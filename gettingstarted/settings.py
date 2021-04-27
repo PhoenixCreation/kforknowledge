@@ -89,6 +89,9 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
 
+LOGIN_REDIRECT_URL = '/explore'
+LOGOUT_REDIRECT_URL = '/'
+
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
