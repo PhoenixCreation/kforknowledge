@@ -6,11 +6,11 @@
             {% csrf_token %}
             <div class="inputWrapper">
                 <div class="label">Your Name: </div>
-                <input class="input-field" name="name" id="name" placeholder="Your good name" />
+                <input class="input-field" name="name" id="name" placeholder="Your good name" required />
             </div>
             <div class="inputWrapper">
                 <div class="label">Course Title: </div>
-                <input class="input-field" name="title" id="title" placeholder="Title of the course" />
+                <input class="input-field" name="title" id="title" placeholder="Title of the course" required />
             </div>
             <div class="inputWrapper">
                 <div class="label">Description of Course: </div>
@@ -18,34 +18,34 @@
             </div>
             <div class="inputWrapper">
                 <div class="label">Tags: </div>
-                <input class="input-field" name="tags" id="tags" placeholder="Tags related to course with comma(,) separated" />
+                <input class="input-field" name="tags" id="tags"  required placeholder="Tags related to course with comma(,) separated" />
             </div>
             <div class="sectionTitle">Beginner's Course</div>
             <div class="inputWrapper">
                 <div class="label">Description: </div>
-                <textarea class="input-field" name="b_des" id="b_des" placeholder="Description of begginer's course" ></textarea>
+                <textarea class="input-field" name="b_des" id="b_des"  required placeholder="Description of begginer's course" ></textarea>
             </div>
             <div class="inputWrapper">
                 <div class="label">Link: </div>
-                <input class="input-field" name="b_link" id="b_link" placeholder="Link to tutorial video for begginer" />
+                <input class="input-field" name="b_link" id="b_link"  required placeholder="Link to tutorial video for begginer" />
             </div>
             <div class="sectionTitle">Intermidiate's Course</div>
             <div class="inputWrapper">
                 <div class="label">Description: </div>
-                <textarea class="input-field" name="i_des" id="i_des" placeholder="Description of intermidiate's course" ></textarea>
+                <textarea class="input-field" name="i_des" id="i_des"  required placeholder="Description of intermidiate's course" ></textarea>
             </div>
             <div class="inputWrapper">
                 <div class="label">Link: </div>
-                <input class="input-field" name="i_link" id="i_link" placeholder="Link to tutorial video for intermidiate" />
+                <input class="input-field" name="i_link" id="i_link"  required placeholder="Link to tutorial video for intermidiate" />
             </div>
             <div class="sectionTitle">Expert's Course</div>
             <div class="inputWrapper">
                 <div class="label">Description: </div>
-                <textarea class="input-field" name="e_des" id="e_des" placeholder="Description of expert's course" ></textarea>
+                <textarea class="input-field" name="e_des" id="e_des"  required placeholder="Description of expert's course" ></textarea>
             </div>
             <div class="inputWrapper">
                 <div class="label">Link: </div>
-                <input class="input-field" name="e_link" id="e_link" placeholder="Link to tutorial video for expert" />
+                <input class="input-field" name="e_link" id="e_link"  required placeholder="Link to tutorial video for expert" />
             </div>
             <button type="submit" class="btn btn-outline-primary">Submit</button>
         </form>

@@ -2,9 +2,12 @@ const sendRequest = (form) => {
     var info = []
     for (let i = 0; i < form.length - 1; i++) {
         const field = form[i];
-        info.push({name: field.name, value: field.value})
+        if(field.value !== null && field.value !== ""){
+            info.push({name: field.name, value: field.value})
+        }
     }
     notify(info)
+    alert("Request recieved sucessfully. Please don't spam.")
     return false
 }
 
