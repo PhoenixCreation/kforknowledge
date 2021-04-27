@@ -1,3 +1,67 @@
-{% extends 'layout.html'%} {% block content %}
-<div class="container">het is fool</div>
+{% extends 'layout.html'%} 
+{% block content %}
+<div class="container">
+    {% if user.is_authenticated %}
+        <form class="requestform" method="post" onsubmit="return sendRequest(this)">
+            {% csrf_token %}
+            <div class="inputWrapper">
+                <div class="label">Your Name: </div>
+                <input class="input-field" name="name" id="name" placeholder="Your good name" />
+            </div>
+            <div class="inputWrapper">
+                <div class="label">Course Title: </div>
+                <input class="input-field" name="title" id="title" placeholder="Title of the course" />
+            </div>
+            <div class="inputWrapper">
+                <div class="label">Description of Course: </div>
+                <textarea class="input-field input-area" name="description" id="description" placeholder="Description of the course" ></textarea>
+            </div>
+            <div class="inputWrapper">
+                <div class="label">Tags: </div>
+                <input class="input-field" name="tags" id="tags" placeholder="Tags related to course with comma(,) separated" />
+            </div>
+            <div class="sectionTitle">Beginner's Course</div>
+            <div class="inputWrapper">
+                <div class="label">Description: </div>
+                <textarea class="input-field" name="b_des" id="b_des" placeholder="Description of begginer's course" ></textarea>
+            </div>
+            <div class="inputWrapper">
+                <div class="label">Link: </div>
+                <input class="input-field" name="b_link" id="b_link" placeholder="Link to tutorial video for begginer" />
+            </div>
+            <div class="sectionTitle">Intermidiate's Course</div>
+            <div class="inputWrapper">
+                <div class="label">Description: </div>
+                <textarea class="input-field" name="i_des" id="i_des" placeholder="Description of intermidiate's course" ></textarea>
+            </div>
+            <div class="inputWrapper">
+                <div class="label">Link: </div>
+                <input class="input-field" name="i_link" id="i_link" placeholder="Link to tutorial video for intermidiate" />
+            </div>
+            <div class="sectionTitle">Expert's Course</div>
+            <div class="inputWrapper">
+                <div class="label">Description: </div>
+                <textarea class="input-field" name="e_des" id="e_des" placeholder="Description of expert's course" ></textarea>
+            </div>
+            <div class="inputWrapper">
+                <div class="label">Link: </div>
+                <input class="input-field" name="e_link" id="e_link" placeholder="Link to tutorial video for expert" />
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </form>
+        <script type="text/javascript" src="static/requestcourse/script.js"></script>
+    {% else %}
+        <div class="authmessage">
+        You need to login to request a new course.
+        <a href="/login">
+        <button class="btn btn-success my-2 my-sm-0 mx-1" >Login</button></a>
+        Don't have an account? Create one here. It won't take more then a minute.
+        <a href="/signup">
+        <button class="btn btn-info my-2 my-sm-0" >Sign up</button></a>
+        </div>
+
+    {% endif %}
+</div>
+<link rel="stylesheet" href="static/requestcourse/style.css">
+
 {% endblock %}

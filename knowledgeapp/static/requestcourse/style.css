@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.requestform {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+.inputWrapper {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.label {
+    margin-right: 10px;
+}
+.input-field {
+    all: initial;
+    border: 2px solid #009bff ;
+    width: 100%;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 6px;
+    transition: all 0.3s linear;
+}
+.input-field:hover {
+    border-color: #005bff;
+}
+.input-field:focus {
+    border-color: #003bff;
+    border-radius: 15px;
+}
+.input-area {
+    resize: none;
+}
+.sectionTitle {
+    font-size: 25px;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+.authmessage {
+    display: flex;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media screen and (max-width: 600px){
+    .inputWrapper {
+        width: 85vw;
+    }
+}
